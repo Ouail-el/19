@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra Age Calculator</title>
+
+  <style>
+    body {
+      background: #0a0a0a;
+      color: #00ff88;
+      font-family: monospace;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      background: #00ff88;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    #output {
+      margin-top: 30px;
+      font-size: 16px;
+      text-align: left;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-line;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #00ffaa;
+      text-align: center;
+    }
+
+    .roast {
+      margin-top: 15px;
+      color: #ff4d4d;
+      font-size: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🧠 Ultra Advanced Age Calculator</h1>
+
+  <button onclick="start()">Calculate His Age, because i can't calculate it</button>
+
+  <div id="output"></div>
+
+  <script>
+    const steps = [
+      "🔍 Scanning brain activity...",
+      "🧬 Extracting DNA...",
+      "🛰️ Connecting to NASA...",
+      "📊 Running calculations...",
+      "🧠 Verifying intelligence level..."
+    ];
+
+    function start() {
+      const output = document.getElementById("output");
+      output.innerHTML = "";
+
+      let i = 0;
+
+      function showSteps() {
+        if (i < steps.length) {
+          output.innerHTML += steps[i] + "\n";
+          i++;
+          setTimeout(showSteps, 700);
+        } else {
+          showMath();
+        }
+      }
+
+      function showMath() {
+        const year = new Date().getFullYear();
+
+        setTimeout(() => {
+          output.innerHTML += "\n📅 Current Year: " + year;
+        }, 500);
+
+        setTimeout(() => {
+          output.innerHTML += "\n➖ Subtracting age: " + year + " - 19";
+        }, 1200);
+
+        setTimeout(() => {
+          output.innerHTML += "\n🧮 Result: 2006 (wow that was hard 😱)";
+        }, 2000);
+
+        setTimeout(() => {
+          output.innerHTML += "\n\n✅ FINAL RESULT: He is born in 2006, so he's 19 years old!";
+        }, 2800);
+
+        setTimeout(() => {
+          output.innerHTML += "\n\n😂 If you needed a whole website to understand that...";
+          output.innerHTML += "\n💀 bro you might actually suck at math";
+        }, 3500);
+      }
+
+      showSteps();
+    }
+  </script>
+
+</body>
+</html>
